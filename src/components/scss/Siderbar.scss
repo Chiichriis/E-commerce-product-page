@@ -1,0 +1,91 @@
+@import 'config';
+
+.sidebar{
+    background-color: $White;
+    padding: 1.5rem;
+
+    .sidebar-wrap{
+        background-color: inherit;
+
+        .company-id{
+            color: $Orange;
+            font-family: $fontBold;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: .8rem;
+            letter-spacing: 1px;
+        }
+    
+        .sidebar-header{
+            font-family: $fontBold;
+            text-transform: capitalize;
+            font-size: 1.7rem;
+            margin: .5rem 0;
+            color: $Very-dark-blue;
+        }
+    
+        .sidebar-txt{
+            font-family: $font;
+            color: $Dark-grayish-blue;
+            font-size: .9rem;
+            margin: 1rem 0;
+        }
+    
+        .pricing{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: $fontBold;
+    
+            .new-offer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+    
+                h1{
+                    color: $Very-dark-blue;
+                }
+    
+                .discount{
+                    background-color: $Pale-orange;
+                    padding: .2rem .5rem;
+                    color: $Orange;
+                    border-radius: .3rem;
+                    font-size: .9rem;
+                }
+            }
+    
+            .oldPrice{
+                color: $Grayish-blue;
+                text-decoration: line-through;
+                font-size: .9rem;
+            }
+        }
+    }
+
+  
+}
+
+@media (min-width: 800px) {
+    .sidebar{
+
+        .sidebar-wrap{
+
+            .sidebar-header {
+                font-size: 1.8rem;
+                max-width: 70%;
+            }
+
+            .pricing{
+                flex-direction: column;
+                align-items: flex-start;
+                padding: .5rem 0;
+
+                .oldPrice{
+                    margin: .3rem 0 0;
+                }
+            }
+        }
+    }
+}

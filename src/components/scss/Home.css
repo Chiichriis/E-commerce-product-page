@@ -1,0 +1,23 @@
+@font-face {
+  font-family: KumbhSans;
+  src: url(../font/KumbhSans-Regular.ttf);
+}
+@font-face {
+  font-family: KumbhSansBold;
+  src: url(../font/KumbhSans-Bold.ttf);
+}
+.body {
+  padding: 4rem 0 0;
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 0 12rem;
+    padding: 8rem 0 0;
+  }
+}

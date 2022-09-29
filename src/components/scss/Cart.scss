@@ -1,0 +1,93 @@
+@import 'config';
+
+.cart-card{
+    position: absolute;
+    background-color: $White;
+    margin: 1rem;
+    border-radius: .5rem;
+    width: 91.5%;
+    visibility: hidden;
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    .cart-header{
+        border-bottom: solid 1px $Grayish-blue;
+
+        p{
+            font-family: $fontBold;
+            color: $Very-dark-blue;
+            font-size: 1rem;
+            padding: 1.5rem 1.5rem;
+        }
+       
+    }
+
+    .cart-content{
+        padding: 1.5rem;
+        
+        .content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img{
+                    height: 3rem;
+                    width: auto;
+                    border-radius: .3rem;
+                }
+                
+                p{
+                    font-family: $font;
+                    font-size: .9rem;
+                    line-height: 1.3rem;
+                    color: $Dark-grayish-blue;
+                    b{color: $Very-dark-blue; font-family: $fontBold;}
+                }
+            }
+
+            .delIcon{
+                cursor: pointer;
+                &:hover{filter: brightness(-200%); transition: ease-in-out .2s;}
+            }
+        }
+
+        .empty-cart{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            p{font-family: $fontBold; color: $Dark-grayish-blue;}
+        }
+
+        .cart-btn{
+            width: 100%;
+            @include btn;
+            margin: 1.5rem 0 0;
+            font-size: .9rem;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+
+    
+}
+
+
+@media (min-width: 800px) {
+    .cart-card{
+        right: 0;
+        top: 4rem;
+        width: 26%;
+        margin-right: 7rem;
+    }
+}

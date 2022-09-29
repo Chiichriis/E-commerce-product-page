@@ -1,0 +1,87 @@
+@import 'config';
+
+.slider{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .slide-wrap{
+        height: 60vh;
+
+       .slide-item{
+            width: 100%;
+            position: absolute;
+
+            img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+        }
+    }
+
+    .slide-cusor{
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        img{
+            background-color: $White;
+            padding: .5rem .7rem;
+            border-radius: 50%;
+        }
+    }
+
+    .slide-thumbnail{
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .slider{
+
+        .slide-wrap{
+            display: flex;
+            align-items: center;
+    
+            .slide-item{
+                
+                img{
+                    border-radius: .5rem;
+                }
+            }
+        }
+
+        .slide-cusor{
+            display: none;
+        }
+
+        .slide-thumbnail{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+
+            img{
+                height: 5rem;
+                border-radius: .5rem;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: .7;
+                    transition: all ease-in-out .2s;
+                }
+            }
+            .active{
+                opacity: .7;
+                border: solid .2rem $Orange;
+            }
+
+        }
+    }
+}

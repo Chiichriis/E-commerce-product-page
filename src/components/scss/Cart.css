@@ -1,0 +1,100 @@
+@font-face {
+  font-family: KumbhSans;
+  src: url(../font/KumbhSans-Regular.ttf);
+}
+@font-face {
+  font-family: KumbhSansBold;
+  src: url(../font/KumbhSans-Bold.ttf);
+}
+.cart-card {
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+  margin: 1rem;
+  border-radius: 0.5rem;
+  width: 91.5%;
+  visibility: hidden;
+  z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cart-card .cart-header {
+  border-bottom: solid 1px hsl(220deg, 14%, 75%);
+}
+.cart-card .cart-header p {
+  font-family: KumbhSansBold;
+  color: hsl(220deg, 13%, 13%);
+  font-size: 1rem;
+  padding: 1.5rem 1.5rem;
+}
+.cart-card .cart-content {
+  padding: 1.5rem;
+}
+.cart-card .cart-content .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-card .cart-content .content div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cart-card .cart-content .content div img {
+  height: 3rem;
+  width: auto;
+  border-radius: 0.3rem;
+}
+.cart-card .cart-content .content div p {
+  font-family: KumbhSans;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  color: hsl(219deg, 9%, 45%);
+}
+.cart-card .cart-content .content div p b {
+  color: hsl(220deg, 13%, 13%);
+  font-family: KumbhSansBold;
+}
+.cart-card .cart-content .content .delIcon {
+  cursor: pointer;
+}
+.cart-card .cart-content .content .delIcon:hover {
+  filter: brightness(-200%);
+  transition: ease-in-out 0.2s;
+}
+.cart-card .cart-content .empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.cart-card .cart-content .empty-cart p {
+  font-family: KumbhSansBold;
+  color: hsl(219deg, 9%, 45%);
+}
+.cart-card .cart-content .cart-btn {
+  width: 100%;
+  background-color: hsl(26deg, 100%, 55%);
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(223deg, 64%, 98%);
+  padding: 1rem;
+  border: none;
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cart-card .cart-content .cart-btn:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 800px) {
+  .cart-card {
+    right: 0;
+    top: 4rem;
+    width: 26%;
+    margin-right: 7rem;
+  }
+}
